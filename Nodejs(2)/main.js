@@ -3,7 +3,7 @@ var fs = require('fs');
 var url = require('url'); //(1)require == import
 var app = http.createServer(function(request,response){
     var _url = request.url; //(2)
-    console.log(_url)
+    console.log(_url) //(2.1)
     var queryData = url.parse(_url, true).query;// (3)
     var allData = url.parse(_url, true);// (3.1)
     console.log(allData);// (3.1)
