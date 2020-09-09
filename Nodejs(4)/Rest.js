@@ -3,19 +3,28 @@ const app = express()
 const port = 3000
 
 app.get('/', (req, res) => {
-  res.send('get엿이나 처먹어라 World!')
+    res.send('get response')
+})
+
+app.get('/test', (req, res) => {
+    res.send('get test response')
+})
+
+app.get('/json', (req, res) => {
+    test_json = JSON.stringify({"test":"Test Data"})
+    res.send(test_json)
 })
 
 app.post('/', (req, res) => {
-    res.send('post엿이나 처먹어라 World!')
+    res.send('post response')
 })
 
 app.delete('/', (req, res) => {
-    res.send('delete엿이나 처먹어라 World!')
+    res.send('delete response')
 })
 
 app.put('/', (req, res) => {
-    res.send('put엿이나 처먹어라 World!')
+    res.send('put response')
 })
 
 
